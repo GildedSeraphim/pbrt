@@ -1,5 +1,5 @@
 {
-  description = "Vulkan Flake";
+  description = "PBRT Flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -24,66 +24,12 @@
         devShells = {
           default = pkgs.mkShell rec {
             buildInputs = with pkgs; [
-              ##################
-              ### VULKAN SDK ###
-              vulkan-headers
-              vulkan-loader
-              vulkan-validation-layers
-              vulkan-tools
-              vulkan-tools-lunarg
-              vulkan-utility-libraries
-              vulkan-extension-layer
-              vulkan-volk
-              vulkan-validation-layers
-              spirv-headers
-              spirv-tools
-              spirv-cross
-              mesa
-              glslang
-              ##################
-
-              ####################
-              ### Compat Tools ###
-              xorg.libX11
-              xorg.libXrandr
-              xorg.libXcursor
-              xorg.libXi
-              xorg.libXxf86vm
-              xorg.libXinerama
-              wayland
-              wayland-protocols
-              kdePackages.qtwayland
-              kdePackages.wayqt
-              ####################
-
               #################
               ### Libraries ###
-              glfw3
-              glfw
-              glm
-              vulkan-memory-allocator
-              vk-bootstrap
-
-              imgui
-              stb
-              tinyobjloader
-
-              libGLU
-              libGL
-              libxkbcommon
-
-              SDL2
-              SDL2_ttf
-
-              pkg-config
-
-              boost
-              catch2
               #################
 
               #################
               ### Compilers ###
-              shaderc
               gcc
               clang
               #################
@@ -109,7 +55,6 @@
               ### Tools ###
               renderdoc
               cmake
-              glslviewer
               #############
             ];
 
